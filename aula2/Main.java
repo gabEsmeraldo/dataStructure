@@ -1,10 +1,9 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Collection;
 public class Main {
     public static void main(String[] args) {
         //Questao01();
-        Questao02();
+        //Questao02();
     }   
     public static void Questao01(){
         Scanner scanner = new Scanner(System.in);
@@ -41,14 +40,14 @@ public class Main {
         list.remove(index);
     } 
     public static void Questao02(){
-        Scanner scanner = new Scanner(System.in);
         System.out.println("Questão 02:");
         System.out.println("Quantos valores devem ser suportados pela array?");
-        int arraySize = scanner.nextInt();
+        Scanner scanner2 = new Scanner(System.in);
+        int arraySize = scanner2.nextInt();
         int[] values = new int[arraySize];
         for(int i = 0; i < values.length; i++){
             System.out.println("Adicione o " + (i+1) + "º numero no array:");
-            values[i] = scanner.nextInt();
+            values[i] = scanner2.nextInt();
         }
         System.out.print("Array antes da ordenação: [ ");
         for(int i = 0; i < values.length; i++) {
@@ -60,7 +59,7 @@ public class Main {
             System.out.print(values[i] + " ");
         }
         System.out.println("]");
-        scanner.close();
+        scanner2.close();
     }
     public static void orderNumbers(int[] list){
         int n = list.length;
