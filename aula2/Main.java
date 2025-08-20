@@ -2,8 +2,8 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
-        //Questao01();
-        //Questao02();
+        Questao01();
+        // Questao02();
     }   
     public static void Questao01(){
         Scanner scanner = new Scanner(System.in);
