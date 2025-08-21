@@ -1,11 +1,11 @@
 public class SomaDigitos {
 
-    public SomaDigitos(int n) {
-        if(number <= 10) return n;
-        return SomaDigitos(n.)
+    public static int somaDigitos(int n) {
+        if(n <= 10) return n;
+        return somaDigitos(n / 10) + somaDigitos(n % 10);
     }
     
     public static void main(String[] args) {
-        System.out.println(somaDigito(1234));
+        System.out.println(somaDigitos(123456));
     }    
 }
