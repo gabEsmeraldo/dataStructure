@@ -1,0 +1,52 @@
+Complexidades
+questao 1
+O(n)
+
+questao 2
+O(n)
+
+questao 3
+O(2**n)
+
+questao 4
+O(n) para n igual a length
+
+questao 5
+O(n)
+
+questao 6
+ordernar
+O(n²)? talvez nao seja devido a busca na lista
+maiorValor
+O(2n)
+exibirArray
+O(n)
+InverterArray
+O(n)
+InverterArrayRecursivo
+O(n)
+
+questao 7
+termo recursivo
+O(n-1)
+soma recursiva
+O(2n - 1)
+
+termo nao recursivo
+O(1)
+soma nao recursiva
+O(1)
+
+questao 8
+termo nao recursivo
+O(1)
+
+termo recursivo
+O(n - 1)
+
+SOMA
+não recursivo
+O(1)
+
+recursivo
+O(2n - 1)
