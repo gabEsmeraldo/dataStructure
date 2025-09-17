@@ -13,12 +13,12 @@ public class MiniKalzone {
     filaDeEspera.listarPedidos();
     filaDeEspera.removerPedido(3);
     filaDeEspera.removerPedido();
-    System.out.println("\nRemovidos 2 pedidos");
+    System.out.println("\nDois pedidos entregues.");
     System.out.print("Listando pedidos Restantes: ");
     filaDeEspera.quantidadePedidosRestantes();
     filaDeEspera.listarPedidos();
     filaDeEspera.removerPedido();
-    System.out.println("\nListando pedidos após remoção");
+    System.out.println("\nListando pedidos após entrega");
     filaDeEspera.listarPedidos();
   }
 }
