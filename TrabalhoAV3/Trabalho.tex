@@ -1,0 +1,130 @@
+% Start of LaTeX document: defines document type and format
+% a4paper = A4 page size, 10pt = base font size
+\documentclass[a4paper,10pt]{article}
+
+% --- PACKAGES ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{parskip}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{makecell}
+\usepackage{longtable}
+\usepackage{listings}
+% Configure listings to handle UTF-8 encoding and line breaking
+\lstset{
+    inputencoding=utf8,
+    extendedchars=true,
+    breaklines=true,
+    breakatwhitespace=true,
+    postbreak=\mbox{\textcolor{gray}{$\hookrightarrow$}\space},
+    literate={ã}{{\~a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+             {Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+             {à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+             {À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+             {õ}{{\~o}}1 {Õ}{{\~O}}1 {ç}{{\c c}}1 {Ç}{{\c C}}1
+}
+% For better line breaks in long URLs (don't use \href{}, use \url{} for long URLs)
+% \usepackage{xurl}
+
+% --- DOCUMENT SETUP ---
+% Set page margins to maximize content space
+\geometry{top=1.0cm, bottom=1.0cm, left=1.0cm, right=1.0cm}
+
+% Remove page numbers and headers for clean resume look
+\pagestyle{empty}
+
+% PDF metadata - customize with your information
+\hypersetup{
+    pdftitle={Trabalho AV3 Estrutura de Dados},
+    pdfauthor={Gabriel Esmeraldo},
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black,
+    bookmarksdepth=1 
+}
+
+% Disable section numbering for cleaner appearance
+\setcounter{secnumdepth}{0}
+
+% Format section headers with bold text and underline
+\titleformat{\section}
+{\Large\bfseries}
+{}
+{0em}
+{}
+[\titlerule\vspace{0.5ex}]
+
+% --- BEGIN DOCUMENT ---
+\begin{document}
+
+% --- HEADER ---
+\begin{center}
+    {Gabriel Esmeraldo}
+    {\textbullet}
+    {2512890}
+    {\textbullet}
+    {T390-85} 
+    {\textbullet}
+    {Estrutura de Dados} 
+    {\textbullet}
+    {AV3} 
+\end{center}
+
+% --- SECTIONS ---
+
+\section{TADS Estudados e seus correspondentes em JAVA}
+    \begin{center}
+    \begin{tabular}{ |l|r| }
+        \hline
+            Lista Estatica & java.util.ArrayList \\ \hline
+            Lista Simplemente Encadeada & Não há \\  \hline
+            Lista Duplamente Encadeada & java.util.LinkedList \\\hline
+            Lista Circular & Não há \\ \hline
+            Pilha & java.util.Stack (legado) \\  \hline
+            Fila & java.util.Queue \\\hline
+            Fila de Prioridade & java.util.PriorityQueue \\ \hline
+            Arvore Generica & Não há \\  \hline
+            Arvore Binária & Não há \\ \hline
+            Heap & Não há \\ \hline
+            Arvore De Busca & Não há \\ \hline
+            Arvore AVL & Somente Arvore Rubro-Negra \\ \hline
+            Tabela Hash & java.util.HashMap \\
+        \hline
+    \end{tabular}
+    \end{center}
+
+\section{Metodos Existentes no JAVA}
+\begin{center}
+    \begin{longtable}{ |l|c|c|c|c| }
+    \hline
+        \textbf{Classe} & \textbf{Metodos} & \textbf{Parametros} & \textbf{Retorno} & \textbf{Descrição} \\ [0.5ex] \hline
+    \endfirsthead
+    \hline
+        \textbf{Classe} & \textbf{Metodos} & \textbf{Parametros} & \textbf{Retorno} & \textbf{Descrição} \\ [0.5ex] \hline
+    \endhead
+    \hline
+    \endfoot
+    \hline
+    \endlastfoot
+        \textbf{ArrayList} & \makecell{ add() \\ add() \\ remove() \\ remove() \\ clear() \\ get() \\ set() \\ size() \\ isEmpty()} & \makecell{Objeto \\ Index e Objeto \\ Index \\  Objeto \\ null \\ Index \\ Index e Objeto \\ null \\ null} & \makecell{Boolean \\ Void \\ Objeto \\ Boolean \\ Void \\ Objeto \\ Objeto \\ Int \\ Boolean} & \makecell{Adiciona no final \\ Adiciona no Index \\ Remove do Index \\ Remove primeira ocorrência \\ Limpa a lista \\ Retorna objeto do Index \\ Altera objeto do Index \\ Retorna tamanho \\ Verifica se vazia} \\  \hline
+
+        \textbf{LinkedList} & \makecell{ add() \\ add() \\ addFirst() \\ addLast() \\ remove() \\ remove() \\ removeFirst() \\ removeLast() \\ clear() \\ get() \\ getFirst() \\ getLast() \\ set() \\ indexOf() \\ size() \\ isEmpty() \\ contains() \\ poll() \\ peek() \\ push() \\ pop()} & \makecell{Objeto \\ Index e Objeto \\ Objeto \\ Objeto \\ Index \\ Objeto \\ null \\ null \\ null \\ Index \\ null \\ null \\ Index e Objeto \\ Objeto \\ null \\ null \\ Objeto \\ null \\ null \\ Objeto \\ null} & \makecell{Boolean \\ Void \\ Void \\ Void \\ Objeto \\ Boolean \\ Objeto \\ Objeto \\ Void \\ Objeto \\ Objeto \\ Objeto \\ Objeto \\ Int \\ Int \\ Boolean \\ Boolean \\ Objeto \\ Objeto \\ Void \\ Objeto} & \makecell{Adiciona no final \\ Adiciona no Index \\ Adiciona no início \\ Adiciona no final \\ Remove do Index \\ Remove primeira ocorrência \\ Remove primeiro \\ Remove último \\ Limpa a lista \\ Retorna objeto do Index \\ Retorna primeiro \\ Retorna último \\ Altera objeto do Index \\ Retorna índice do objeto \\ Retorna tamanho \\ Verifica se vazia \\ Verifica se contém \\ Remove primeiro (null se vazia) \\ Retorna primeiro (não remove) \\ Adiciona no topo (pilha) \\ Remove do topo (pilha)} \\ \hline
+
+        \textbf{Stack} & \makecell{ push() \\ pop() \\ peek() \\ empty() \\ search()} & \makecell{Objeto \\ null \\ null \\ null \\ Objeto} & \makecell{Objeto \\ Objeto \\ Objeto \\ Boolean \\ Int} & \makecell{Adiciona no topo \\ Remove do topo \\ Retorna topo (não remove) \\ Verifica se vazia \\ Retorna posição (1-based)} \\ \hline
+
+        \textbf{Queue} & \makecell{ add() \\ offer() \\ remove() \\ poll() \\ element() \\ peek() \\ size() \\ isEmpty() \\ clear()} & \makecell{Objeto \\ Objeto \\ null \\ null \\ null \\ null \\ null \\ null \\ null} & \makecell{Boolean \\ Boolean \\ Objeto \\ Objeto \\ Objeto \\ Objeto \\ Int \\ Boolean \\ Void} & \makecell{Adiciona no final \\ Adiciona no final \\ Remove primeiro \\ Remove primeiro (null se vazia) \\ Retorna primeiro \\ Retorna primeiro (null se vazia) \\ Retorna tamanho \\ Verifica se vazia \\ Remove todos} \\ \hline
+
+        \textbf{PriorityQueue} & \makecell{ add() \\ offer() \\ remove() \\ poll() \\ element() \\ peek() \\ size() \\ isEmpty() \\ clear() \\ contains() \\ toArray() \\ iterator()} & \makecell{Objeto \\ Objeto \\ null \\ null \\ null \\ null \\ null \\ null \\ null \\ Objeto \\ null \\ null} & \makecell{Boolean \\ Boolean \\ Objeto \\ Objeto \\ Objeto \\ Objeto \\ Int \\ Boolean \\ Void \\ Boolean \\ Object[] \\ Iterator} & \makecell{Adiciona com prioridade \\ Adiciona com prioridade \\ Remove maior prioridade \\ Remove maior (null se vazia) \\ Retorna maior prioridade \\ Retorna maior (null se vazia) \\ Retorna tamanho \\ Verifica se vazia \\ Remove todos \\ Verifica se contém \\ Converte para array \\ Retorna iterador} \\ \hline
+
+        \textbf{HashMap} & \makecell{ put() \\ get() \\ remove() \\ containsKey() \\ containsValue() \\ keySet() \\ values() \\ entrySet() \\ size() \\ isEmpty() \\ clear() \\ putAll() \\ getOrDefault() \\ putIfAbsent() \\ replace() \\ replace()} & \makecell{Key e Value \\ Key \\ Key \\ Key \\ Value \\ null \\ null \\ null \\ null \\ null \\ null \\ Map \\ Key e Default \\ Key e Value \\ Key e Value \\ Key, Old e New} & \makecell{Value \\ Value \\ Value \\ Boolean \\ Boolean \\ Set \\ Collection \\ Set \\ Int \\ Boolean \\ Void \\ Void \\ Value \\ Value \\ Value \\ Boolean} & \makecell{Adiciona par chave-valor \\ Retorna valor da chave \\ Remove par da chave \\ Verifica se contém chave \\ Verifica se contém valor \\ Retorna conjunto de chaves \\ Retorna coleção de valores \\ Retorna conjunto de pares \\ Retorna número de pares \\ Verifica se vazio \\ Remove todos os pares \\ Adiciona pares de outro Map \\ Retorna valor ou default \\ Adiciona se chave não existe \\ Substitui valor da chave \\ Substitui se valor é oldValue} \\
+    \end{longtable}
+    \end{center}
+
+\section{Codigo aplicando alguma das classes}
+\lstinputlisting[language=Java, firstline=2, extendedchars=true, breaklines=true, breakatwhitespace=true]{Main.java}
+\end{document}
