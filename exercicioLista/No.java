@@ -8,4 +8,9 @@ class No {
         this.proximo = null;
         this.anterior = null;
     }
+
+    public char getChar() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getChar'");
+    }
 }
